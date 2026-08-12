@@ -1,0 +1,10 @@
+# docs/operator-quickstart.md の step 1 が node_modules/ を作る。この repo には
+# .gitignore が無かったので、手順どおり踏んだ人の tree に 65 package が untracked で
+# 現れていた（`git add -A` 事故のもと）。隣の cloud-itonami/lawyer と同じ形にしてある。
+node_modules/
+svelte/build/
+svelte/.svelte-kit/
+dist/
+.wrangler/
+.env
+.env.local
