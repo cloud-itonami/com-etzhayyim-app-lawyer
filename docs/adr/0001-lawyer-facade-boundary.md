@@ -7,7 +7,7 @@ Accepted (2026-08-12)
 ## Context
 
 この workspace には弁護士・法律事務所を名乗る repo が複数ある。実測
-（`nbb scripts/repo-search.cljs lawfirm saiban bengoshi`、2026-08-12）:
+（`kbb --backend sci scripts/repo-search.cljk lawfirm saiban bengoshi`、2026-08-12）:
 
 - `cloud-itonami/lawfirm` — 受任〜終結を弁護士の判断を必ず経由する形で記録・監査する
   事務所 OS。langgraph StateGraph の governed actor（`LawFirmAdvisor ⊣ LawFirmGovernor`）
