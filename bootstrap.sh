@@ -4,7 +4,7 @@
 # 前提:
 #   1. etzhayyim auth login (j.kawasaki) 済み  → `etzhayyim auth whoami` で did:etzhayyim:* 確認
 #   2. Azure AD app に ChannelMessage.Read.All の admin consent 済み
-#   3. mac Keychain に etzhayyim.m365 credentials 設定済み (root CLAUDE.md 参照)
+#   3. mac Keychain に etzhayyim.m365 credentials 設定済み (root AGENTS.md 参照)
 #
 # Phase 1 (did:etzhayyim bootstrap, 3 種) → Phase 3 (lawyer records, 3 種)
 # Phase 4 (Teams sync) は sync_teams_channel.mjs を別途実行。
