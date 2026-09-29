@@ -37,7 +37,7 @@ dispatcher 既定 URL・tenant）。ロジックの差は無い。
 | test harness | vitest（中身は placeholder 1 件） | 無い |
 
 つまり**ここが中継している `com.etzhayyim.apps.lawyer.*` の schema 正本は、
-この repo の中には無い**。`CLAUDE.md` が指す `00-contracts/lexicons/…` は抽出前の
+この repo の中には無い**。`AGENTS.md` が指す `00-contracts/lexicons/…` は抽出前の
 monorepo のパスで、この repo には存在しない。
 
 **2. 両系統とも live ではない。**

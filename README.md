@@ -38,7 +38,7 @@
 **lexicon（NSID の schema 正本）はここには無い。** 6 command の lexicon JSON は
 `cloud-itonami/lawyer/lexicons/lawyer/` にあり、そこの `id` は
 `ai.gftd.apps.lawyer.*` —— つまり**ここが中継している `com.etzhayyim.apps.lawyer.*`
-の schema は、この repo の中には書かれていない**。`CLAUDE.md` が指している
+の schema は、この repo の中には書かれていない**。`AGENTS.md` が指している
 `00-contracts/lexicons/…` は抽出前の monorepo のパスで、ここには存在しない。
 
 ## 中身（28 ファイル / 167 KB。うち 25 は抽出時のまま）
@@ -50,7 +50,7 @@ appview/etzhayyim-wasm-lawyer-334bbd5f/
   wrangler.jsonc          Worker 設定。alias 8 件は死んでいる（下記）
   kotodama.jsonld         actor manifest（capabilities / derive rules / space）
   svelte/                 5 view。**wrangler の build に繋がっていない**（下記）
-CLAUDE.md                 設計文書。リンクは monorepo 時代のパスで切れている
+AGENTS.md                 設計文書。リンクは monorepo 時代のパスで切れている
 PROJECT.jsonld            did:web / tier / governance
 bootstrap.sh              DID mint + record 登録。`etzhayyim` CLI が要る（無い）
 README.edn / migration.edn / NOTICE   抽出の由来
@@ -71,7 +71,7 @@ Node からそのまま呼べる。手順は [`docs/operator-quickstart.md`](doc
 | 壊れた POST body | 400 `InvalidJson` |
 | それ以外 | 404 `NotFound` |
 
-**判断はここには無い。** matter も grant も ISCO-2611 承認ゲートも、`CLAUDE.md` が
+**判断はここには無い。** matter も grant も ISCO-2611 承認ゲートも、`AGENTS.md` が
 書いているものは全部 dispatcher の向こう側（LangServer / RisingWave）の話で、
 この repo には 1 行も無い。ここに在るのは中継と `firmDid` の注入だけ。
 
@@ -85,7 +85,7 @@ Node からそのまま呼べる。手順は [`docs/operator-quickstart.md`](doc
 - **svelte の 5 view は deploy されない。** `wrangler.jsonc` の `main` は
   `src/app.ts` で、`assets` / `site` binding は無い。この設定で deploy しても
   出るのは JSON facade だけ。svelte 側は lockfile も持たない。
-- **`wrangler` が依存に無い**ので、`CLAUDE.md` の「Deploy」節（`etzhayyim deploy`）は
+- **`wrangler` が依存に無い**ので、`AGENTS.md` の「Deploy」節（`etzhayyim deploy`）は
   この repo 単体では踏めない。
 - **`bootstrap.sh` は `etzhayyim` CLI を要求して exit 1 で止まる**（実測）。
   fail-closed なので害は無いが、CLI の配布元はこの repo には書かれていない。
@@ -113,6 +113,6 @@ DNS が無い時点で解決不能。manifest の DID を「登録済みの iden
   直す先が無い。消すなら deploy 経路を復活させる作業と一緒にやる。
 - **`README.edn` / `migration.edn` を書き換えない。** 抽出時の由来を固定した
   canonical EDN（`:allowed-additions ["README.edn" "migration.edn"]`）。
-- **`CLAUDE.md` のリンクを辿らない。** `../../00-contracts/…` `60-apps/…` は
+- **`AGENTS.md` のリンクを辿らない。** `../../00-contracts/…` `60-apps/…` は
   抽出前の monorepo のパスで、この repo には存在しない。設計の記述としては
   読めるが、パスとしては全部切れている。

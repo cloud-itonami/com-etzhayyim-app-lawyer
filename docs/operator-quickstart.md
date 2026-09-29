@@ -126,7 +126,7 @@ npm test               # = vitest run
 
 - **deploy できない。** `wrangler` は devDependencies に無く、`wrangler.jsonc` は
   この repo に無い Cloudflare 資源（`secrets_store_secrets` 22 件・`hyperdrive`・
-  4 つの `services` binding）を要求する。`CLAUDE.md` の `etzhayyim deploy` は
+  4 つの `services` binding）を要求する。`AGENTS.md` の `etzhayyim deploy` は
   monorepo 時代の CLI 経由の手順。
 - **`bootstrap.sh` は止まる。** 実測:
 
@@ -167,5 +167,5 @@ curl -s -o /dev/null -w '%{http_code}\n' https://lawyer.gftd.ai/_app/meta   # 52
 - [`../README.md`](../README.md) — この repo が何で、隣の 3 repo と何が違うか
 - [`adr/0001-lawyer-facade-boundary.md`](adr/0001-lawyer-facade-boundary.md) — なぜ
   ここに弁護士業務を足さないか
-- `CLAUDE.md` — 設計の記述としては読める。**リンクは全部切れている**
+- `AGENTS.md` — 設計の記述としては読める。**リンクは全部切れている**
   （`../../00-contracts/…` `60-apps/…` は抽出前の monorepo のパス）
